@@ -8,6 +8,7 @@ def read_file(filename):
 
 def convert(lines):
     new = []
+    person = None
     for line in lines:
         if line == 'Allen':
             person = line
@@ -15,13 +16,22 @@ def convert(lines):
         elif line == 'Tom':
             person = 'Tom'
             continue
-        new.append(person + ':' + line)
-    print(new)
+        if person:
+            new.append(person + ':' + line)
+    return new
+
+
+def write_file(filename, lines):
+    with open(filename, 'w', encoding='utf-8')as f:
+        for line in lines:
+            f.write(line + '\n')
 
 
 def main():
     lines = read_file('input.txt')
-    new = convert(lines)
+    lines = convert(lines)
+    print(lines)
+    write_file('output.txt',lines)
 
 
 main()
