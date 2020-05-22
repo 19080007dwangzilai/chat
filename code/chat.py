@@ -1,6 +1,6 @@
 def read_file(filename):
     lines = []
-    with open(filename, 'r', encoding='utf-8-sig') as f:              dfjdkfjkdjfek    fekfjlkjdfljk ldkjfldkjflkdjflkdjflkdjflds  dkfjdlkjfdlkjfldkjflkdjf
+    with open(filename, 'r', encoding='utf-8-sig') as f:              #dfjdkfjkdjfek    fekfjlkjdfljk ldkjfldkjflkdjflkdjflkdjflds  dkfjdlkjfdlkjfldkjflkdjf
         for line in f:
             lines.append(line.strip())
     return lines
